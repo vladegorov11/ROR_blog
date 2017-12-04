@@ -1,3 +1,9 @@
 <h1 style=" text-align: center;">Cтатьи</h1>
 
+	<% if user_signed_in? && current_user.admin? %>
+	   <%= link_to 'Новая статья', new_admin_post_path, class: 'btn btn-outline-primety btn-sm'%>
+	<% end %>
+	
 <%= render @posts %>
+
+<%= will_paginate @posts, renderer: 'BootstrapPaginationHelper::LinkRenderer' %>

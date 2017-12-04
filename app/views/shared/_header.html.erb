@@ -1,0 +1,37 @@
+
+ <div class="container-fluid"> 
+    <div class="header"></div>
+  </div>
+  <div class="container-fluid"> 
+       <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+          <div class="collapse navbar-collapse navbar-header" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item <%= 'active' if current_page?(root_path) || current_page?(posts_path) %>">
+              <a class="nav-link" href="<%= root_path %>">Все статьи</a>
+           </li>
+            <% Category.order(:name).roots.each do |category| %>
+              <li class="nav-item <%= 'active' if current_page?(category_path(category)) %>">
+                <%= link_to category.name, category, class: 'nav-link' %>
+              </li>
+            <% end %>
+            </ul> 
+          </div>
+           
+
+       <ul class="navbar-nav mr-auto">
+         <% if user_signed_in?%>
+            <li class="nav-item ">
+            <%= link_to "Выход", destroy_user_session_path, method: :delete, class: "nav-link" %>
+           </li>
+         <% else %>
+
+           <li class="nav-item ">
+              <%= link_to "Вход", new_user_session_path, class: "nav-link  log_in" %>
+           </li>  
+             <li class="nav-item ">
+             <%= link_to "Регистрация", new_user_registration_path, class: "nav-link" %>
+           </li>  
+        </ul> 
+       <% end %>
+     </nav>
+</div>

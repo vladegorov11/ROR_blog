@@ -2,15 +2,32 @@
 	<section class="post-head">
 		<h2><%= link_to post.title, post_path(post) %></h2>
 		<small>
-			<time><%= post.created_at.to_date.strftime("%d %B, %Y") %> </time>
+			<time><a class="material-icons" style="font-size:20px;">today</a><%= post.created_at.to_date.strftime("%d %B, %Y") %> </time>
+			<% if post.category.present? %>
 			|
-			<%= link_to 'Изменить', edit_post_path(post) %>
+			<span>Категория: </span><%= link_to post.category.name, post.category %>
+			<% end %>
+			<% if user_signed_in? && current_user.admin? %>
+			|
+			<%= link_to 'create', edit_admin_post_path(post), class: 'material-icons' %>
             |
-			<%= link_to 'удалить' , post_path(post), method: :delete, data: { confirm: 'Вы уверены ?'}%>
+			<%= link_to 'delete' , admin_post_path(post), method: :delete, data: { confirm: 'Вы уверены ?'}, class: 'material-icons'%>
+			<% end %>
 		</small>
 	</section>
-    <section class="post-summary">
+    <section class="post-summary clearfix">
+        <%= image_tag post.image.url(:thumb), class: 'img-thumbnail thumb' if post.image?%>
 		<%= post.summary %>
+	</section>
+	  <section class="footor-summary">
+	  <div class="tags">
+        <%= raw post.tags.map(&:name).map{|t| link_to t, tag_path(t), class: 'tag tag-primary'}.join(' ')%>
+	   
+	  </div>
+	 <div class="views">
+	         <p> <a class="material-icons" style="font-size:20px;">chat</a> 0</p>
+	         <p> <a class="material-icons" style="font-size:20px;">visibility</a> <%= post.views %></p>
+	   </div>	
 	</section>
 </article>
 

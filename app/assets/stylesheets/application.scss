@@ -10,7 +10,263 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require trix
  *= require_tree .
  *= require_self
  */
  @import "bootstrap";
+ 
+.post-body img {
+	display:block;
+	margin-bottom:10px ;
+	height:250px;
+	width:250px;
+	float:left;
+	margin-right:15px ; 
+}
+
+.thumb {
+	float:left;
+	margin-right: 10px;
+	margin-bottom:10px ;
+	height:100px;
+	width:100px;
+}
+
+.editor {
+	min-height:250px;
+}
+.tags a{
+	background:#DC143C;
+    text-decoration: none;
+	padding-left:10px;
+	padding-top:5px;
+	padding-right:10px;
+	padding-bottom:5px;
+	border-radius:5px;
+	color: #000;
+}
+
+.tags a:hover{
+	background: #1E90FF;
+	border: 1px solid #1E90FF;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+       -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+         -o-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+a {
+	text-decoration: none;
+	color:#DC143C;
+}
+a:hover {
+	text-decoration: none;
+	color:#87CEEB;
+}
+.material-icons {
+	position:relative;
+    bottom:-5px; 
+    text-decoration: none;
+    color: #000;
+}
+.tag1{
+	font-size:22px;
+}
+.tag2{
+	font-size:20px;
+}
+.tag3{
+	font-size:24px;
+}
+.tag4{
+	font-size:26px;
+}
+.tag4{
+	font-size:18px;
+}
+.tag2:hover {
+	color:#8A2BE2;
+	
+}
+.tag3:hover {
+	color:#00CED1;
+}
+.tag5:hover {
+	color:#FFD700;
+
+}
+.tag1:hover {
+	color:#FF0000;
+}
+.tag4:hover {
+	color:#00FF00;
+}
+.col-md-3 a {
+	padding-left: 5px ;
+}
+li {
+list-style-type: none;
+}
+.pagination ul li {
+	float:left;
+	list-style-type: none;
+	padding: 2px , 4px;
+}
+.page-link{
+	border:0px;
+	color:#A9A9A9;
+}
+
+.page-link:hover{
+	background: #fff;
+}
+.pagination ul {
+	padding:0px ;
+}
+.SinoptikInformer {
+	margin-left:45px;
+	margin-top:20px;
+	width:160px;
+}
+.tag_cloud{
+	text-align:center;
+}
+.tag_cloud a{
+	color:#808080;
+}
+.submenu ul {
+	padding-left:44px;
+}
+@media (max-width: 1200px) {
+	.SinoptikInformer { width:160px;   }
+	.rails-icon {display:none; }
+
+ }
+ @media (max-width: 768px) {
+	.submenu ul li { text-align:center; padding-left:0px; }
+	.submenu ul { padding-left:0px; }
+	.submenu ul li a  {padding-left:0px; padding-right:0px;}
+	.footer {text-align:center;}
+ }
+ .right-bar{
+ padding-top:15px;
+ }
+
+
+ 
+ .container {
+ background-color:#fff;
+ }
+.header {
+     width:100%;
+     height:250px;
+	background:url(bg2.jpg) no-repeat center ; 
+	background-size: 100%;
+}
+
+.rails-icon {
+	 width:100px;
+     height:60px;
+     background:url(bg3.png) no-repeat center ;
+     background-size: 100%;
+     position:relative;
+     bottom: -20px;
+     left:108px;
+}
+
+.right-bar h2 {
+	text-align:center;
+
+}
+.breadcrumb{
+	background-color:#fff;
+}
+new_user{
+	text-align:center;
+}
+.log_in {
+	border-right: 1px solid #000;
+}
+
+.footer {
+	background: #292b2c; 
+	margin-top:60px;
+}
+
+.footer-social-icon ul li {
+	float:left;
+	height:70px;
+}
+.footer-link {
+	font-size: 24px;
+	font-family: 'Pacifico', cursive;
+	
+	padding-top:20px;
+}
+
+
+i[class*="ic"] {
+    display: inline-block;
+    vertical-align: middle;
+    background: url(social_link.png) no-repeat;   
+}
+i.ic-twitter {
+    height: 40px;
+    width: 41px;
+    background-position: 0 0;
+}
+
+i.ic-whatsup {
+    height: 41px;
+    width: 40px;
+    background-position: -40px 0;
+}
+i.ic-google {
+    height: 41px;
+    width: 40px;
+    background-position: -80px 0;
+}
+i.ic-facebook {
+    
+    height: 41px;
+    width: 40px;
+    background-position: -120px 0;
+}
+
+i.ic-youtube {
+    height: 41px;
+    width: 40px ;
+    background-position: -160px 0px ;
+}
+i.ic-instagram {
+    height: 41px;
+    width: 63px ;
+    background-position: -200px 0px ;
+}
+
+.footer-social-icon ul {
+	padding-top:20px;
+}
+
+.views {
+
+	font-size: 16px;
+	height:10px;
+}
+
+.views p {
+	float:right;
+	padding-left:15px;
+}
+
+
+
+
+
+
+
+
+
+
+

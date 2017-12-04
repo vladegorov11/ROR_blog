@@ -1,0 +1,48 @@
+<% if @post.errors.any?%>
+<div class="alert alert-danger">
+	<h5><%= t('common.errors')%></h5>
+	<ul>
+		<% @post.errors.full_messages.each do |message|%>
+		<li><%= message %></li>
+		<% end %>
+	</ul>
+</div>
+<%end%>
+
+<%= form_for [:admin, @post], html: { multipart: true }  do |f| %>
+<div class="form-group">
+	<%= f.label :title %>
+	<%= f.text_field :title, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+	<%= f.label :summary %>
+	<%= f.text_area :summary, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+	<%= f.label :body %>
+	<%= f.trix_editor :body, class: 'editor' %>
+</div>
+
+<div class="form-group">
+	<%= f.label :all_tags %>
+	<%= f.text_field :all_tags, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+	<%= f.label :category_id %>
+	<%= f.collection_select :category_id, Category.order(:name), :id, :name,{include_black: true}, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+	<%= f.file_field :image, class: 'btn'%>
+</div>
+
+<div class="form-group">
+	<%= f.submit 'сохранить', class: 'btn btn-success'%>
+	<%= link_to 'назад', posts_path(@posts), class: 'btn btn-default' if @post.id == nil%>
+	<%= link_to 'назад', post_path(@post), class: 'btn btn-default' if @post.id?  %>
+</div>
+
+<% end %>

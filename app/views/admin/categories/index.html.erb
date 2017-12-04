@@ -1,0 +1,33 @@
+<h1>Категории</h1>
+
+<div class="button_panel">
+	<%= link_to 'новая кутегория', new_admin_category_path, class: 'btn btn-outline-primery btn-sm'%>
+</div>
+
+<section id="categories">
+		<table class="table">
+		  <thead>
+				<tr>
+					<th>#</th>
+					<th>название</th>
+					<th>категория родителя</th>
+					<th></th>
+				</tr>
+		   </thead>
+		   <tbody>
+		   	   <% @categoreis.each_with_index do |category, index| %>
+			   	   <tr>
+				   	   	<td><%= index + 1 %> </td>
+				   	   	<td><%= category.name %></td>
+				   	   	<td><%= category.parent.name if category.parent.present? %></td>
+				   	   	<td>
+				   	   		<%= link_to 'Изменить', edit_admin_category_path(category), class: 'btn btn-outline-primery btn-sm'%>
+				   	   	</td>
+				   	   	<td>
+				   	   		<%= link_to 'удалить', admin_category_path(category), method: :delete, deta: {confirm: 'вы уверены?'}, class: 'btn btn-outline-primery btn-sm'%>
+				   	   	</td>
+			   	   </tr>
+		   	   <% end %>
+		   </tbody>
+		</table>
+</section>
