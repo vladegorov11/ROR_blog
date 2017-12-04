@@ -33,10 +33,7 @@
                   </div>
                   <%= render 'shared/submenu' %>
                 <div class="tag_cloud">   
-                   <h4>Популярные теги <a class="material-icons cloud" style="font-size:32px;">cloud</a></h4>
-                     <% tag_cloud(Tag.counts , 'tag') do |tag, css_class| %> 
-                     <%= link_to tag.name, tag_path(tag.name), class: css_class  %>
-                   <% end %>
+                   
                 </div>
              </div>
        </div>
