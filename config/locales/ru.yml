@@ -1,0 +1,31 @@
+ru:
+  common:
+    errors: 'При заполнении формы возникли ошибки'
+    back: 'Назад'
+    create: 'Создать'
+    edit: 'Изменить'
+  will_paginate:
+    previous_label: '&larr; Туда'
+    next_label: 'Сюда &rarr;'
+  posts:
+    index:
+      title: 'Статьи'
+  admin:
+    posts:
+      new:
+        title: 'Новая статья'
+      edit:
+        title: 'Редактирование статьи'
+      form:
+        submit:
+          '%{action} статью'
+    categories:
+      index:
+        title: 'Категории'
+      new:
+        title: 'Новая категория'
+      edit:
+        title: 'Редактирование категории'
+      form:
+        submit:
+          '%{action} категорию'
