@@ -142,6 +142,9 @@ list-style-type: none;
 .slidebar {
 	transition: left 0.5s ease-out 0.5s;
 }
+.log_in {
+	border-right: 1px solid #000;
+}
 .icon-menu {
 	z-index: 2;
 	display: none;
@@ -164,6 +167,9 @@ list-style-type: none;
 .pagination a,span,em {
         padding-right: 5px;
       }
+#phone-version {
+	display: none;
+}
 @media (max-width: 1200px) {
 	.SinoptikInformer { width:160px;   }
 	.rails-icon {display:none; }
@@ -177,7 +183,6 @@ list-style-type: none;
 	.icon-menu { display: block; }
 	.slidebar {
 		overflow: scroll;
-		
 		font-size: 90%;
 		position: fixed;
 		left: -50%;
@@ -185,6 +190,15 @@ list-style-type: none;
 		width: 50%;
 		height: 100%;
 		background-color: #fff;
+	}
+	#phone-version {
+		display: block;
+	}
+	.log_in {
+		border: 0 ;
+	}
+	.nav-item a {
+		text-align: center;
 	}
 	.wrap-slidebar {
 		margin-top: 20px;
@@ -235,9 +249,7 @@ list-style-type: none;
 new_user{
 	text-align:center;
 }
-.log_in {
-	border-right: 1px solid #000;
-}
+
 
 .footer {
 	background: #292b2c; 
