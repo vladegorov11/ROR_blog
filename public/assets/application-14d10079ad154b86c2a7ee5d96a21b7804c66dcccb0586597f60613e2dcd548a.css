@@ -11630,8 +11630,8 @@ li {
 .icon-menu {
   z-index: 2;
   display: none;
-  height: 30px;
-  width: 17px;
+  height: 50px;
+  width: 22px;
   float: left;
   padding: 5px 0;
   cursor: pointer;
@@ -11644,8 +11644,8 @@ li {
 /* line 159, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 .divide {
   display: block;
-  height: 2px;
-  margin: 3px 0;
+  height: 3px;
+  margin: 4px 0;
   background: #000;
 }
 
@@ -11695,43 +11695,59 @@ li {
 
   /* line 179, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
   .slidebar {
-    font-size: 80%;
+    overflow: scroll;
+    font-size: 90%;
     position: fixed;
-    left: -45%;
+    left: -50%;
     top: 0;
-    width: 45%;
+    width: 50%;
     height: 100%;
     background-color: #fff;
   }
 
-  /* line 188, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
-  .slidebar h2, h4 {
-    font-size: 1.5em;
+  /* line 190, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+  .wrap-slidebar {
+    margin-top: 20px;
   }
 
-  /* line 191, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+  /* line 193, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+  .slidebar::-webkit-scrollbar {
+    width: 0;
+  }
+
+  /* line 194, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+  .slidebar::-ms-overflow-scrollbar {
+    width: 0;
+  }
+
+  /* line 196, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+  .slidebar h2, h4 {
+    font-size: 1.7em;
+  }
+
+  /* line 199, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
   .slidebar.active-bar {
     left: 0;
   }
 }
-/* line 195, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 203, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 .right-bar {
   padding-top: 15px;
 }
 
-/* line 201, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 209, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 .container {
   background-color: #fff;
 }
 
-/* line 204, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 212, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 .header {
   width: 100%;
   height: 250px;
   background: url(bg2.jpg) no-repeat center;
 }
 
-/* line 211, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 219, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 .rails-icon {
   width: 100px;
   height: 60px;
@@ -11742,106 +11758,106 @@ li {
   left: 108px;
 }
 
-/* line 221, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 229, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 .right-bar h2 {
   text-align: center;
 }
 
-/* line 225, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 233, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 .breadcrumb {
   background-color: #fff;
 }
 
-/* line 228, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 236, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 new_user {
   text-align: center;
 }
 
-/* line 231, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 239, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 .log_in {
   border-right: 1px solid #000;
 }
 
-/* line 235, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 243, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 .footer {
   background: #292b2c;
   margin-top: 60px;
 }
 
-/* line 240, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 248, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 .footer-social-icon ul li {
   float: left;
   height: 70px;
 }
 
-/* line 244, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 252, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 .footer-link {
   font-size: 24px;
   font-family: 'Pacifico', cursive;
   padding-top: 20px;
 }
 
-/* line 252, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 260, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 i[class*="ic"] {
   display: inline-block;
   vertical-align: middle;
   background: url(social_link.png) no-repeat;
 }
 
-/* line 257, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 265, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 i.ic-twitter {
   height: 40px;
   width: 41px;
   background-position: 0 0;
 }
 
-/* line 263, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 271, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 i.ic-whatsup {
   height: 41px;
   width: 40px;
   background-position: -40px 0;
 }
 
-/* line 268, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 276, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 i.ic-google {
   height: 41px;
   width: 40px;
   background-position: -80px 0;
 }
 
-/* line 273, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 281, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 i.ic-facebook {
   height: 41px;
   width: 40px;
   background-position: -120px 0;
 }
 
-/* line 280, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 288, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 i.ic-youtube {
   height: 41px;
   width: 40px;
   background-position: -160px 0px;
 }
 
-/* line 285, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 293, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 i.ic-instagram {
   height: 41px;
   width: 63px;
   background-position: -200px 0px;
 }
 
-/* line 291, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 299, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 .footer-social-icon ul {
   padding-top: 20px;
 }
 
-/* line 295, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 303, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 .views {
   font-size: 16px;
   height: 10px;
 }
 
-/* line 301, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
+/* line 309, /home/project1/test1/project_test1/app/assets/stylesheets/application.scss */
 .views p {
   float: right;
   padding-left: 15px;
