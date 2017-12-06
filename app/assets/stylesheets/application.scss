@@ -145,8 +145,8 @@ list-style-type: none;
 .icon-menu {
 	z-index: 2;
 	display: none;
-	height: 30px;
-	width: 17px;
+	height: 50px;
+	width: 22px;
 	float: left;
 	padding: 5px 0 ;
 	cursor: pointer;
@@ -157,8 +157,8 @@ list-style-type: none;
 }
 .divide {
 	display: block;
-	height: 2px;
-	margin: 3px 0 ;
+	height: 3px;
+	margin: 4px 0 ;
 	background: #000;
 }
 .pagination a,span,em {
@@ -176,16 +176,24 @@ list-style-type: none;
 	.footer {text-align:center;}
 	.icon-menu { display: block; }
 	.slidebar {
-		font-size: 80%;
+		overflow: scroll;
+		
+		font-size: 90%;
 		position: fixed;
-		left: -45%;
+		left: -50%;
 		top:0;
-		width: 45%;
+		width: 50%;
 		height: 100%;
 		background-color: #fff;
 	}
+	.wrap-slidebar {
+		margin-top: 20px;
+	}
+	.slidebar::-webkit-scrollbar { width: 0; }
+	.slidebar::-ms-overflow-scrollbar { width: 0; }
+	
 	.slidebar h2,h4 {
-		font-size: 1.5em;
+		font-size: 1.7em;
 	} 
 	.slidebar.active-bar {
 		left: 0;

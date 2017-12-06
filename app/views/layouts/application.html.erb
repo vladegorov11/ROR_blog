@@ -28,6 +28,7 @@
   	           <%= yield %>
           </div>
              <div class="col-md-3 col-sm-push-9 right-bar slidebar ">
+              <div class="wrap-slidebar">
                   <div class="rails-icon">
                     
                   </div>
@@ -38,16 +39,26 @@
                      <%= link_to tag.name, tag_path(tag.name), class: css_class  %>
                    <% end %>
                 </div>
+              </div>
              </div>
        </div>
      </div> 
     <%= render 'shared/footer'%>
     <script type="text/javascript">
-      jQuery(document).ready(function($){
+      $(document).ready(function($){
         $('.icon-menu').click(function(event){
           $('.slidebar').toggleClass('active-bar');
         });
       });
+
+      $(document).mouseup(function (e) {
+        var container = $(".slidebar");
+          if (container.has(e.target).length === 0){
+            container.removeClass('active-bar');
+          }
+      });
+
+      
     </script>
   </body>
 </html>
