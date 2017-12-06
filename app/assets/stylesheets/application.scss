@@ -138,6 +138,32 @@ list-style-type: none;
 .submenu ul {
 	padding-left:44px;
 }
+
+.slidebar {
+	transition: left 0.5s ease-out 0.5s;
+}
+.icon-menu {
+	z-index: 2;
+	display: none;
+	height: 30px;
+	width: 17px;
+	float: left;
+	padding: 5px 0 ;
+	cursor: pointer;
+	margin-right: 10px;
+	margin-left: 10px;
+	position: fixed;
+	top: 0 ;
+}
+.divide {
+	display: block;
+	height: 2px;
+	margin: 3px 0 ;
+	background: #000;
+}
+.pagination a,span,em {
+        padding-right: 5px;
+      }
 @media (max-width: 1200px) {
 	.SinoptikInformer { width:160px;   }
 	.rails-icon {display:none; }
@@ -148,6 +174,22 @@ list-style-type: none;
 	.submenu ul { padding-left:0px; }
 	.submenu ul li a  {padding-left:0px; padding-right:0px;}
 	.footer {text-align:center;}
+	.icon-menu { display: block; }
+	.slidebar {
+		font-size: 80%;
+		position: fixed;
+		left: -45%;
+		top:0;
+		width: 45%;
+		height: 100%;
+		background-color: #fff;
+	}
+	.slidebar h2,h4 {
+		font-size: 1.5em;
+	} 
+	.slidebar.active-bar {
+		left: 0;
+	}
  }
  .right-bar{
  padding-top:15px;

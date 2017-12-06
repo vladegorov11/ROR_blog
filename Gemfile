@@ -40,6 +40,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'ancestry'
 gem 'devise'
 gem 'rails-i18n'
+gem 'jquery-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :development, :test do

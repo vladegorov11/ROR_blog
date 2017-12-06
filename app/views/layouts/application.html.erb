@@ -3,18 +3,13 @@
   <head>
     <title>OxygenBlog</title>
     <%= csrf_meta_tags %>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <style type="text/css">
-      .pagination a,span,em {
-        padding-right: 5px;
-      }
-    </style>
   </head>
-   
   <body>
     <%= render 'shared/header'%>
     <div class="container main ">
@@ -22,7 +17,7 @@
          <div class="col-md-12">
             <% flash.each do |name,message|%>
               <div class="alert <%= bootstrap_class_for(name) %>">
-                  <button class="close" data-dismiss="alert" >&times;</button>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   <%= message%>
               </div>
             <% end %>
@@ -32,7 +27,7 @@
           <div class="col-md-9 col-sm-pull-3 ">
   	           <%= yield %>
           </div>
-             <div class="col-md-3 col-sm-push-9 right-bar">
+             <div class="col-md-3 col-sm-push-9 right-bar slidebar ">
                   <div class="rails-icon">
                     
                   </div>
@@ -47,6 +42,12 @@
        </div>
      </div> 
     <%= render 'shared/footer'%>
-    
+    <script type="text/javascript">
+      jQuery(document).ready(function($){
+        $('.icon-menu').click(function(event){
+          $('.slidebar').toggleClass('active-bar');
+        });
+      });
+    </script>
   </body>
 </html>
